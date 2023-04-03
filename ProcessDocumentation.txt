@@ -1,0 +1,17 @@
+**Steering Mechanic Demo**
+
+Author:
+    Alex/EnDarke
+
+Quick Note:
+    I could very well just use Roblox's built in VectorForce, AlignOrientation,
+    AlignPosition, etc. objects, but that's no fun! I want to challenge myself :D
+
+Objective:
+    Create a demo where players can place nodes to create a track for a
+    little ship to follow along.
+
+Algorithm:
+    - Steering Behaviors originally proposed by, "Craig W. Reynolds"
+
+    

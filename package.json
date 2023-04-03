@@ -1,0 +1,28 @@
+{
+  "name": "steering-behavior",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rbxts/compiler-types": "^2.1.0-types.1",
+    "@rbxts/types": "^1.0.672",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "@rbxts/janitor": "^1.14.1-ts.1",
+    "@rbxts/knit": "^0.0.21-alpha.0",
+    "@rbxts/object-utils": "^1.0.4",
+    "@rbxts/profileservice": "^1.4.1",
+    "@rbxts/services": "^1.5.1",
+    "knit": "^0.2.0",
+    "package": "^1.0.1",
+    "services": "^0.0.3"
+  }
+}
