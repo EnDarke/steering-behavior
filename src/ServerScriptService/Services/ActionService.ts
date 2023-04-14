@@ -1,20 +1,20 @@
 // Author: Alex/EnDarke
 // Description: Handles all UI actions for the server.
 
-// Services \\
+// Service Declarations
 import { Workspace } from "@rbxts/services";
 
-// Packages \\
+// Package Declarations
 import { KnitServer as Knit } from "@rbxts/knit";
 
-// Globals \\
+// Global Declarations
 declare global {
     interface KnitServices {
         ActionService: typeof ActionService;
     }
 }
 
-// Knit Start-Up \\
+// Knit Start-Up
 const ActionService = Knit.CreateService({
     Name: "ActionService",
     Client: {

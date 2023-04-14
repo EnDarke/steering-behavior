@@ -1,23 +1,23 @@
 // Author: Alex/EnDarke
 // Description: Handles path creation for steering.
 
-// Services \\
+// Service Declarations
 import { Workspace } from "@rbxts/services";
 
-// Packages \\
+// Package Declarations
 import { KnitServer as Knit } from "@rbxts/knit";
 
-// Modules \\
+// Module Declarations
 import Point from "ServerScriptService/Modules/Point";
 
-// Globals \\
+// Global Declarations
 declare global {
     interface KnitServices {
         PathService: typeof PathService;
     }
 }
 
-// Knit Start-Up \\
+// Knit Start-Up
 const PathService = Knit.CreateService({
     Name: "PathService",
     Client: {},

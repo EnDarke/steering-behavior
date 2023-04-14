@@ -1,17 +1,17 @@
 // Author: Alex/EnDarke
 // Description: Handles saving data through "ProfileService".
 
-// Services \\
+// Service Declarations
 import { Players } from "@rbxts/services";
 
-// Packages \\
+// Package Declarations
 import { KnitServer as Knit } from "@rbxts/knit";
 
-// Modules \\
+// Module Declarations
 import * as ProfileService from "@rbxts/profileservice";
 import DataFormat from "ServerScriptService/Modules/DataFormat";
 
-// Globals \\
+// Global Declarations
 import { Profile, ProfileStore } from "@rbxts/profileservice/globals";
 
 declare global {
@@ -20,14 +20,14 @@ declare global {
     }
 }
 
-// Constants \\
+// Constant Declarations
 const PLAYER_STORE: ProfileStore<typeof DataFormat> = ProfileService.GetProfileStore("Player", DataFormat);
 const KEY: string = "Steering_Demo_";
 
-// Variables \\
+// Variable Declarations
 let Profiles = new Array<Profile<typeof DataFormat>>;
 
-// Knit Start-Up \\
+// Knit Start-Up
 const DataService = Knit.CreateService({
     Name: "DataService",
     Client: {

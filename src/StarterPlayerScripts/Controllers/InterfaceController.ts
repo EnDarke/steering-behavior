@@ -1,14 +1,14 @@
 // Author: Alex/EnDarke
 // Description: Handles functionality for on-screen interface for player experience.
 
-// Services \\
+// Service Declarations
 import { ReplicatedStorage, UserInputService, Workspace } from "@rbxts/services";
 
-// Packages \\
+// Package Declarations
 import { KnitClient as Knit } from "@rbxts/knit";
 import { Janitor } from "@rbxts/janitor";
 
-// Globals \\
+// Global Declarations
 import Object from "@rbxts/object-utils";
 
 declare global {
@@ -17,13 +17,13 @@ declare global {
     }
 }
 
-// Constants \\
-const UserInterface: Folder = ReplicatedStorage.Storage.UI;
-const Player: Player = Knit.Player;
-const PlayerGui: PlayerGui = Player.PlayerGui;
-const Mouse: Mouse = Player.GetMouse();
+// Constant Declarations
+const USER_INTERFACE: Folder = ReplicatedStorage.Storage.UI;
+const PLAYER: Player = Knit.Player;
+const PLAYER_GUI: PlayerGui = PLAYER.PlayerGui;
+const MOUSE: Mouse = PLAYER.GetMouse();
 
-// Knit Start-Up \\
+// Knit Start-Up
 const InterfaceController = Knit.CreateController({
     Name: "InterfaceController",
 
@@ -48,7 +48,7 @@ const InterfaceController = Knit.CreateController({
             if ( gameProcessed ) return undefined;
 
             if ( input.UserInputType === Enum.UserInputType.MouseButton1 ) {
-                this.ActionService.New(Mouse.Hit.Position);
+                this.ActionService.New(MOUSE.Hit.Position);
             }
         }));
         
@@ -70,15 +70,15 @@ const InterfaceController = Knit.CreateController({
 
     KnitInit(): void {
         // Load player user interface.
-        for (const uiObj of UserInterface.GetChildren()) {
+        for (const uiObj of USER_INTERFACE.GetChildren()) {
             let copy = uiObj.Clone();
-            copy.Parent = PlayerGui;
+            copy.Parent = PLAYER_GUI;
         }
     },
 
     KnitStart(): void {
         // Local Constants
-        const Buttons: Frame = PlayerGui.Saves.MainFrame.Buttons;
+        const Buttons: Frame = PLAYER_GUI.Saves.MainFrame.Buttons;
         const NewButton: TextButton = Buttons.FindFirstChild("NewButton") as TextButton;
         const DeleteButton: TextButton = Buttons.FindFirstChild("DeleteButton") as TextButton;
         const SaveButton: TextButton = Buttons.FindFirstChild("SaveButton") as TextButton;
