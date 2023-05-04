@@ -5,7 +5,7 @@ Author:
 
 Quick Note:
     I could very well just use Roblox's built in VectorForce, AlignOrientation,
-    AlignPosition, etc. objects, but that's no fun! I want to challenge myself :D
+    AlignPosition, etc. objects, but that's no fun! :D
 
 Objective:
     Create a demo where players can place nodes to create a track for a
