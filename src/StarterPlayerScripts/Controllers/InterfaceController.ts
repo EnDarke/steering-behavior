@@ -32,19 +32,19 @@ const InterfaceController = Knit.CreateController({
     ActionService: Knit.GetService("ActionService"),
 
     // Objects
-    Janitor: new Janitor<RBXScriptConnection>(),
+    _janitor: new Janitor<RBXScriptConnection>(),
 
     // Placing info/assets
     IsPlacing: false,
 
     New(): boolean | undefined {
         if ( this.IsPlacing ) {
-            this.Janitor.Cleanup();
+            this._janitor.Cleanup();
             this.IsPlacing = false;
             return undefined;
         }
 
-        this.Janitor.Add(UserInputService.InputBegan.Connect((input: InputObject, gameProcessed: boolean) => {
+        this._janitor.Add(UserInputService.InputBegan.Connect((input: InputObject, gameProcessed: boolean) => {
             if ( gameProcessed ) return undefined;
 
             if ( input.UserInputType === Enum.UserInputType.MouseButton1 ) {

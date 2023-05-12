@@ -28,7 +28,7 @@ interface PlayerData {
     },
 }
 
-// Saves UserInterace | Types & Children
+// UserInterface | Types & Children
 interface PlayerGui extends Instance {
     Saves: ScreenGui & {
         MainFrame: Frame & {
