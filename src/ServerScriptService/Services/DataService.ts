@@ -20,6 +20,9 @@ declare global {
     }
 }
 
+// Knit Service Declarations
+//const PathService = Knit.GetService("PathService");
+
 // Constant Declarations
 const PLAYER_STORE: ProfileStore<typeof DataFormat> = ProfileService.GetProfileStore("Player", DataFormat);
 const KEY: string = "Steering_Demo_";
@@ -36,7 +39,6 @@ const DataService = Knit.CreateService({
         },
     },
 
-    // Knit Services
     PathService: Knit.GetService("PathService"),
 
     // Function to get player data.
@@ -89,6 +91,7 @@ const DataService = Knit.CreateService({
             playerAdded(player);
         }
         Players.PlayerAdded.Connect(playerAdded);
+        Players.PlayerRemoving.Connect(playerRemoved);
     },
 
     KnitStart(): void {

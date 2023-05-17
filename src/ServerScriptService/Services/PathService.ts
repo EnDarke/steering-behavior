@@ -30,6 +30,8 @@ const PathService = Knit.CreateService({
         pathPointFolder.Name = player.Name;
         pathPointFolder.Parent = Workspace.Paths;
 
+        this.New();
+
         return true
     },
 
@@ -43,6 +45,8 @@ const PathService = Knit.CreateService({
 
     New() {
         let newPoint = new Point();
+        newPoint.position = new Vector3(5, 5, 5);
+        print(newPoint);
     },
 
     KnitInit() {

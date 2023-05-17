@@ -3,10 +3,10 @@
 
 class Point {
     instance: Instance = new Instance("Part");
+    position: Vector3 = new Vector3();
 }
 
 interface PointStruct {
-    new (): Point;
     instance: Instance;
     position: Vector3;
 }
