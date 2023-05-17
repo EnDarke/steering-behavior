@@ -20,7 +20,8 @@ Steering Behaviors for Autonomous Characters is an algorithm that grants the abi
 ### Short Description
 There are a four key steps that are necessary for this algorithm to work. These would include: `seek and flee`, `pursuit and evasion`, `offset pursuit`, and of course `arrival`.
 
-### How will it need to be implemented?
+### What are the steps about?
 - **Seek and Flee:** This will adjust the velocity of the character that way it is aligned towards the given position or target.
 - **Pursuit and Evasion:** Similar to seek and flee, but this allows us to calculate the potential future position of the target as if it were moving. This way, we are able to catch them whilst moving.
-- **Offset Pursuit:**
+- **Offset Pursuit:** Allows for character to pass near moving target but not directly into. Sort've like a car driving on the right side of the road rather directly in the center.
+- **Arrival:** Character will be able to slowly come to a stop, like a car *arriving* at a red light.
